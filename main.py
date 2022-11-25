@@ -1,6 +1,8 @@
 import shapes.area as a
 import shapes.perimeter as p
 import sys
+from logic import Logic
+from PyQt5 import QtWidgets
 
 
 def selection():
@@ -60,6 +62,10 @@ def will_continue():
 
 
 def main():
+	app = QtWidgets.QApplication(sys.argv)
+	win = Logic()
+	app.exec_()
+	"""
 	is_running = True
 	while is_running:
 		
@@ -97,7 +103,7 @@ def main():
 				print(f'{p.perim_tri(d):.2f}')
 
 		is_running = will_continue() 
-
+	"""
 
 
 if __name__ == '__main__':
