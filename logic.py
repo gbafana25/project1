@@ -25,9 +25,26 @@ class Logic(QtWidgets.QMainWindow, Gui):
 		if self.square_button.isChecked():
 			# compute square (area, perim.)
 			print('square')
+			self.p1label.setText('Side')
+			self.p2label.setText('')
+			self.p3label.setText('')
 		elif self.rectangle_button.isChecked():
-			print('rectangle')	
+			print('rectangle')
+			self.p1label.setText('Side 1')
+			self.p2label.setText('Side 2')
+			self.p3label.setText('')
 		elif self.circle_button.isChecked():
 			print('circle')
+			self.p1label.setText('Radius')
+			self.p2label.setText('')
+			self.p3label.setText('')
 		elif self.triangle_button.isChecked():
 			print('triangle')
+			if c == 0:
+				self.p1label.setText('Side 1')
+				self.p2label.setText('Side 2')
+				self.p3label.setText('Side 3')
+			else:
+				self.p1label.setText('Base')
+				self.p2label.setText('Height')
+				self.p3label.setText('')
