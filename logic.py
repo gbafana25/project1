@@ -3,6 +3,9 @@ from gui import Gui
 import math
 import sys
 
+QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
+QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
+
 class Logic(QtWidgets.QMainWindow, Gui):
 	def __init__(self):
 		self.checking = True
@@ -158,7 +161,7 @@ class Logic(QtWidgets.QMainWindow, Gui):
 					except ValueError:
 						self.output.setText('Inputs must be Numeric Values')
 						return
-					final_output = side * side * side * side
+					final_output = side * 4 
 					self.output.setText(f'Perimeter of a Square: {final_output}')
 
 				elif self.rectangle_button.isChecked():
