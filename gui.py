@@ -6,3 +6,4 @@ class Gui(object):
 		super(Gui, self).__init__()
 		uic.loadUi('window.ui', self)
 		self.show()
+
